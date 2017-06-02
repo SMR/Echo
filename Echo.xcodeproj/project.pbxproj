@@ -12,6 +12,9 @@
 		9BFAA9621EE0EC4200795944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFAA9611EE0EC4200795944 /* Assets.xcassets */; };
 		9BFAA9651EE0EC4200795944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFAA9631EE0EC4200795944 /* LaunchScreen.storyboard */; };
 		9BFAA96D1EE0EC7F00795944 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA96C1EE0EC7F00795944 /* MessagingViewController.swift */; };
+		9BFAA9701EE0EF6800795944 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA96F1EE0EF6800795944 /* Message.swift */; };
+		9BFAA9721EE0F0DB00795944 /* MessagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */; };
+		9BFAA9741EE0F11B00795944 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA9731EE0F11B00795944 /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		9BFAA9641EE0EC4200795944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFAA9661EE0EC4200795944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFAA96C1EE0EC7F00795944 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagingViewController.swift; path = Messaging/MessagingViewController.swift; sourceTree = "<group>"; };
+		9BFAA96F1EE0EF6800795944 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Messaging/Message.swift; sourceTree = "<group>"; };
+		9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagingViewModel.swift; path = Messaging/MessagingViewModel.swift; sourceTree = "<group>"; };
+		9BFAA9731EE0F11B00795944 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = Common/State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 				9BFAA9611EE0EC4200795944 /* Assets.xcassets */,
 				9BFAA9631EE0EC4200795944 /* LaunchScreen.storyboard */,
 				9BFAA9661EE0EC4200795944 /* Info.plist */,
+				9BFAA9731EE0F11B00795944 /* State.swift */,
 			);
 			path = Echo;
 			sourceTree = "<group>";
@@ -67,7 +74,9 @@
 		9BFAA96E1EE0EC8300795944 /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				9BFAA96F1EE0EF6800795944 /* Message.swift */,
 				9BFAA96C1EE0EC7F00795944 /* MessagingViewController.swift */,
+				9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */,
 			);
 			name = Messaging;
 			sourceTree = "<group>";
@@ -144,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFAA9701EE0EF6800795944 /* Message.swift in Sources */,
+				9BFAA9721EE0F0DB00795944 /* MessagingViewModel.swift in Sources */,
 				9BFAA95B1EE0EC4200795944 /* AppDelegate.swift in Sources */,
+				9BFAA9741EE0F11B00795944 /* State.swift in Sources */,
 				9BFAA96D1EE0EC7F00795944 /* MessagingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
