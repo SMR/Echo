@@ -15,6 +15,7 @@
 		9BFAA9701EE0EF6800795944 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA96F1EE0EF6800795944 /* Message.swift */; };
 		9BFAA9721EE0F0DB00795944 /* MessagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */; };
 		9BFAA9741EE0F11B00795944 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA9731EE0F11B00795944 /* State.swift */; };
+		9BFAA9761EE0F32500795944 /* MessagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA9751EE0F32500795944 /* MessagingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9BFAA96F1EE0EF6800795944 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Messaging/Message.swift; sourceTree = "<group>"; };
 		9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagingViewModel.swift; path = Messaging/MessagingViewModel.swift; sourceTree = "<group>"; };
 		9BFAA9731EE0F11B00795944 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = Common/State.swift; sourceTree = "<group>"; };
+		9BFAA9751EE0F32500795944 /* MessagingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagingCell.swift; path = Messaging/MessagingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFAA96F1EE0EF6800795944 /* Message.swift */,
+				9BFAA9751EE0F32500795944 /* MessagingCell.swift */,
 				9BFAA96C1EE0EC7F00795944 /* MessagingViewController.swift */,
 				9BFAA9711EE0F0DB00795944 /* MessagingViewModel.swift */,
 			);
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFAA9761EE0F32500795944 /* MessagingCell.swift in Sources */,
 				9BFAA9701EE0EF6800795944 /* Message.swift in Sources */,
 				9BFAA9721EE0F0DB00795944 /* MessagingViewModel.swift in Sources */,
 				9BFAA95B1EE0EC4200795944 /* AppDelegate.swift in Sources */,

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +19,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagingCell" id="Lxp-xL-RPd">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagingCell" rowHeight="100" id="Lxp-xL-RPd" customClass="MessagingCell" customModule="Echo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lxp-xL-RPd" id="V0S-LB-fSf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4QB-ds-g7e">
+                                            <rect key="frame" x="8" y="8" width="359" height="83.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-Nc-Ap1">
+                                            <rect key="frame" x="24" y="24" width="327" height="51.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4QB-ds-g7e" firstAttribute="leading" secondItem="V0S-LB-fSf" secondAttribute="leading" constant="8" id="9QX-hi-bnQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AYw-Nc-Ap1" secondAttribute="trailing" constant="16" id="LxV-bY-dWr"/>
+                                        <constraint firstAttribute="bottom" secondItem="4QB-ds-g7e" secondAttribute="bottom" constant="8" id="ZTE-hC-nFq"/>
+                                        <constraint firstAttribute="trailing" secondItem="4QB-ds-g7e" secondAttribute="trailing" constant="8" id="eQL-sd-hCx"/>
+                                        <constraint firstItem="AYw-Nc-Ap1" firstAttribute="leading" secondItem="V0S-LB-fSf" secondAttribute="leadingMargin" constant="16" id="fWX-0x-VdN"/>
+                                        <constraint firstItem="AYw-Nc-Ap1" firstAttribute="top" secondItem="V0S-LB-fSf" secondAttribute="topMargin" constant="16" id="h8u-2E-wKl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="AYw-Nc-Ap1" secondAttribute="bottom" constant="16" id="neq-em-Sx4"/>
+                                        <constraint firstItem="4QB-ds-g7e" firstAttribute="top" secondItem="V0S-LB-fSf" secondAttribute="top" constant="8" id="pGp-gz-7T9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bubbleImageView" destination="4QB-ds-g7e" id="oK4-Pt-Mde"/>
+                                    <outlet property="label" destination="AYw-Nc-Ap1" id="sfH-RS-gi6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
