@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-E4-ze5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-E4-ze5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagingCell" rowHeight="200" id="5l3-TX-6gZ" customClass="MessagingCell" customModule="Echo" customModuleProvider="target">
@@ -65,12 +64,37 @@
                                     <outlet property="dataSource" destination="FA1-Wb-eCl" id="465-Wz-8f4"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMP-2W-uCK">
+                                <rect key="frame" x="16" y="629" width="307" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsX-31-RA5">
+                                <rect key="frame" x="331" y="629" width="36" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7FG-E4-ze5" firstAttribute="leading" secondItem="bfg-68-DGr" secondAttribute="leading" id="57d-6y-cc0"/>
+                            <constraint firstItem="HsX-31-RA5" firstAttribute="top" secondItem="tMP-2W-uCK" secondAttribute="top" id="6L8-XH-xZp"/>
+                            <constraint firstItem="iJf-qU-vma" firstAttribute="top" secondItem="tMP-2W-uCK" secondAttribute="bottom" constant="8" id="HeK-jL-qRi"/>
+                            <constraint firstItem="tMP-2W-uCK" firstAttribute="top" secondItem="7FG-E4-ze5" secondAttribute="bottom" constant="8" id="Jwi-7w-ODM"/>
+                            <constraint firstItem="tMP-2W-uCK" firstAttribute="trailing" secondItem="HsX-31-RA5" secondAttribute="leading" constant="-8" id="NeF-Vu-6hd"/>
+                            <constraint firstItem="tMP-2W-uCK" firstAttribute="leading" secondItem="bfg-68-DGr" secondAttribute="leadingMargin" id="PIU-Jz-WMA"/>
+                            <constraint firstItem="HsX-31-RA5" firstAttribute="trailing" secondItem="bfg-68-DGr" secondAttribute="trailingMargin" constant="8" id="Qxv-WP-VYg"/>
+                            <constraint firstAttribute="trailing" secondItem="7FG-E4-ze5" secondAttribute="trailing" id="Vzn-ku-A4I"/>
+                            <constraint firstItem="7FG-E4-ze5" firstAttribute="top" secondItem="bfg-68-DGr" secondAttribute="top" id="cDw-fB-WRn"/>
+                            <constraint firstItem="HsX-31-RA5" firstAttribute="bottom" secondItem="tMP-2W-uCK" secondAttribute="bottom" id="szv-W6-ApI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YRB-KH-0qL"/>
                     <connections>
+                        <outlet property="sendButton" destination="HsX-31-RA5" id="853-TW-pF3"/>
                         <outlet property="tableView" destination="7FG-E4-ze5" id="CPr-Jp-oFs"/>
+                        <outlet property="textField" destination="tMP-2W-uCK" id="ZtM-wi-c1C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sD-5D-lJL" userLabel="First Responder" sceneMemberID="firstResponder"/>

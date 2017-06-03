@@ -12,6 +12,8 @@ import UIKit
 final class MessagingViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
     
     var viewModel: MessagingViewModel!
     
