@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B5B87F01EE24CC4000FCFC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9BFAA9731EE0F11B00795944 /* State.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		9BFAA94E1EE0EC4200795944 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +70,13 @@
 		9BFAA9591EE0EC4200795944 /* Echo */ = {
 			isa = PBXGroup;
 			children = (
+				9B5B87F01EE24CC4000FCFC0 /* Common */,
 				9BFAA96E1EE0EC8300795944 /* Messaging */,
 				9BFAA95A1EE0EC4200795944 /* AppDelegate.swift */,
 				9BFAA95E1EE0EC4200795944 /* Main.storyboard */,
 				9BFAA9611EE0EC4200795944 /* Assets.xcassets */,
 				9BFAA9631EE0EC4200795944 /* LaunchScreen.storyboard */,
 				9BFAA9661EE0EC4200795944 /* Info.plist */,
-				9BFAA9731EE0F11B00795944 /* State.swift */,
 			);
 			path = Echo;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 				9BFAA96B1EE0EC4200795944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

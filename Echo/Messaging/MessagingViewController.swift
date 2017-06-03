@@ -9,8 +9,10 @@
 import UIKit
 
 // MARK: - Messaging View Controller
-final class MessagingViewController: UITableViewController {
+final class MessagingViewController: UIViewController {
     // MARK: Properties
+    @IBOutlet weak var tableView: UITableView!
+    
     var viewModel: MessagingViewModel!
     
     // MARK: View Life Cycle
@@ -28,15 +30,15 @@ final class MessagingViewController: UITableViewController {
 }
 
 // MARK: - Table View Data Source
-extension MessagingViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MessagingViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.state.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessagingCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessagingCell", for: indexPath) as! MessagingCell
         
-        cell.textLabel?.text = viewModel.state.element(at: indexPath.row).text
+        cell.label?.text = viewModel.state.element(at: indexPath.row).text
         
         return cell
     }
