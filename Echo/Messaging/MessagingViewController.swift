@@ -22,12 +22,51 @@ final class MessagingViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        registerNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        unregisterNotifications()
+    }
+    
     // MARK: Public Methods
     func updateUI(with state: State<[Message]>) {
         switch state {
         case .normal:
             tableView.reloadData()
         }
+    }
+    
+    // MARK: Register & unregister notifications
+    private func registerNotifications() {
+        let center = NotificationCenter.default
+        
+        center.addObserver(with: UIViewController.keyboardWillShow) { (payload) in
+            let contentInset = UIEdgeInsetsMake(0.0, 0.0, payload.endFrame.height, 0.0)
+            self.tableView.contentInset = contentInset
+            self.tableView.scrollIndicatorInsets = contentInset
+            
+            // TODO: Move text field
+        }
+        
+        center.addObserver(with: UIViewController.keyboardWillHide) { (payload) in
+            let contentInset = UIEdgeInsets.zero
+            self.tableView.contentInset = contentInset
+            self.tableView.scrollIndicatorInsets = contentInset
+            
+            // TOOD: Move text field
+        }
+    }
+    
+    private func unregisterNotifications() {
+        let center = NotificationCenter.default
+        center.removeObserver(self, name: UIViewController.keyboardWillShow.name, object: nil)
+        center.removeObserver(self, name: UIViewController.keyboardWillHide.name, object: nil)
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B3496881EE4506A009F4128 /* KeyboardPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3496871EE4506A009F4128 /* KeyboardPayload.swift */; };
+		9B34968A1EE4509C009F4128 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3496891EE4509C009F4128 /* NotificationDescriptor.swift */; };
 		9BFAA95B1EE0EC4200795944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAA95A1EE0EC4200795944 /* AppDelegate.swift */; };
 		9BFAA9601EE0EC4200795944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFAA95E1EE0EC4200795944 /* Main.storyboard */; };
 		9BFAA9621EE0EC4200795944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFAA9611EE0EC4200795944 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B3496871EE4506A009F4128 /* KeyboardPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardPayload.swift; path = Common/KeyboardPayload.swift; sourceTree = "<group>"; };
+		9B3496891EE4509C009F4128 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationDescriptor.swift; path = Common/NotificationDescriptor.swift; sourceTree = "<group>"; };
 		9BFAA9571EE0EC4200795944 /* Echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFAA95A1EE0EC4200795944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFAA95F1EE0EC4200795944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				9BFAA9731EE0F11B00795944 /* State.swift */,
+				9B3496871EE4506A009F4128 /* KeyboardPayload.swift */,
+				9B3496891EE4509C009F4128 /* NotificationDescriptor.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -169,7 +175,9 @@
 				9BFAA9721EE0F0DB00795944 /* MessagingViewModel.swift in Sources */,
 				9BFAA95B1EE0EC4200795944 /* AppDelegate.swift in Sources */,
 				9BFAA9741EE0F11B00795944 /* State.swift in Sources */,
+				9B34968A1EE4509C009F4128 /* NotificationDescriptor.swift in Sources */,
 				9BFAA96D1EE0EC7F00795944 /* MessagingViewController.swift in Sources */,
+				9B3496881EE4506A009F4128 /* KeyboardPayload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
