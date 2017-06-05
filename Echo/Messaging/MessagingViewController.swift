@@ -14,6 +14,7 @@ final class MessagingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var textFieldBottomConstraint: NSLayoutConstraint!
     
     var viewModel: MessagingViewModel!
     
@@ -47,19 +48,19 @@ final class MessagingViewController: UIViewController {
         let center = NotificationCenter.default
         
         center.addObserver(with: UIViewController.keyboardWillShow) { (payload) in
-            let contentInset = UIEdgeInsetsMake(0.0, 0.0, payload.endFrame.height, 0.0)
-            self.tableView.contentInset = contentInset
-            self.tableView.scrollIndicatorInsets = contentInset
+            self.textFieldBottomConstraint.constant += payload.endFrame.height
             
-            // TODO: Move text field
+            UIView.animate(withDuration: payload.duration) {
+                self.view.layoutIfNeeded()
+            }
         }
         
         center.addObserver(with: UIViewController.keyboardWillHide) { (payload) in
-            let contentInset = UIEdgeInsets.zero
-            self.tableView.contentInset = contentInset
-            self.tableView.scrollIndicatorInsets = contentInset
+            self.textFieldBottomConstraint.constant = 8
             
-            // TOOD: Move text field
+            UIView.animate(withDuration: payload.duration) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
     

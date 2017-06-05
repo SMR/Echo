@@ -95,6 +95,7 @@
                         <outlet property="sendButton" destination="HsX-31-RA5" id="853-TW-pF3"/>
                         <outlet property="tableView" destination="7FG-E4-ze5" id="CPr-Jp-oFs"/>
                         <outlet property="textField" destination="tMP-2W-uCK" id="ZtM-wi-c1C"/>
+                        <outlet property="textFieldBottomConstraint" destination="HeK-jL-qRi" id="zQu-WB-gcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sD-5D-lJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
