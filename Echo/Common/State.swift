@@ -28,11 +28,7 @@ extension State where T: RangeReplaceableCollection {
     func append(_ element: T.Iterator.Element) -> State {
         switch self {
         case let .normal(elements):
-            if elements.isEmpty {
-                return .normal([element] as! T)
-            } else {
-                return .normal(elements + [element])
-            }
+            return .normal(elements + [element])
         }
     }
 }
