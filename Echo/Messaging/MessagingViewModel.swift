@@ -27,5 +27,10 @@ final class MessagingViewModel {
     func appendMessage(with text: String) {
         let newMessage = Message(text: text, isSentByMe: true)
         state = state.append(newMessage)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let echoMessage = Message(text: text + "\n" + text, isSentByMe: false)
+            self.state = self.state.append(echoMessage)
+        }
     }
 }

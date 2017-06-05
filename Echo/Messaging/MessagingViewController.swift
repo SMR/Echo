@@ -42,7 +42,12 @@ final class MessagingViewController: UIViewController {
     func updateUI(with state: State<[Message]>) {
         switch state {
         case .normal:
-            tableView.reloadData()
+            let indexPath = IndexPath(row: state.count - 1, section: 0)
+            tableView.beginUpdates()
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
     
