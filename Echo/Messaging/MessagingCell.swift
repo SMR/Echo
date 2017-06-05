@@ -12,4 +12,19 @@ final class MessagingCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var bubbleImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    var message: Message? {
+        didSet {
+            message.flatMap {
+                label.text = $0.text
+                bubbleImageView.image = $0.isSentByMe ? UIImage(named: "right_bubble") : UIImage(named: "left_bubble")
+            }
+        }
+    }
+    
+    // MARK: Reuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        bubbleImageView.image = nil
+    }
 }

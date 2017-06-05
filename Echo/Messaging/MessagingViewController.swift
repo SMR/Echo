@@ -94,9 +94,7 @@ extension MessagingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessagingCell", for: indexPath) as! MessagingCell
-        
-        cell.label?.text = viewModel.state.element(at: indexPath.row).text
-        
+        cell.message = viewModel.state.element(at: indexPath.row)
         return cell
     }
 }
