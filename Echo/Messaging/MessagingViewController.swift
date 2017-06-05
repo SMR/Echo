@@ -21,6 +21,9 @@ final class MessagingViewController: UIViewController {
     // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +71,13 @@ final class MessagingViewController: UIViewController {
         let center = NotificationCenter.default
         center.removeObserver(self, name: UIViewController.keyboardWillShow.name, object: nil)
         center.removeObserver(self, name: UIViewController.keyboardWillHide.name, object: nil)
+    }
+    
+    // MARK: Actions
+    @IBAction func sendAction(sender: UIButton) {
+        guard let text = textField.text, !text.isEmpty else { return }
+        
+        viewModel.appendMessage(with: text)
     }
 }
 

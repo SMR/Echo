@@ -22,4 +22,10 @@ final class MessagingViewModel {
     init(callback: @escaping (State<[Message]>) -> ()) {
         self.callback = callback
     }
+    
+    // MARK: Public Methods
+    func appendMessage(with text: String) {
+        let newMessage = Message(text: text, isSentByMe: true)
+        state = state.append(newMessage)
+    }
 }

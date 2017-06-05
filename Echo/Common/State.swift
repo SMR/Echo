@@ -12,7 +12,7 @@ enum State<T> {
     case normal(T)
 }
 
-extension State where T: Collection {
+extension State where T: RangeReplaceableCollection {
     var count: T.IndexDistance {
         switch self {
         case let .normal(elements): return elements.count
@@ -22,6 +22,17 @@ extension State where T: Collection {
     func element(at index: T.Index) -> T.Iterator.Element {
         switch self {
         case let .normal(elements): return elements[index]
+        }
+    }
+    
+    func append(_ element: T.Iterator.Element) -> State {
+        switch self {
+        case let .normal(elements):
+            if elements.isEmpty {
+                return .normal([element] as! T)
+            } else {
+                return .normal(elements + [element])
+            }
         }
     }
 }
