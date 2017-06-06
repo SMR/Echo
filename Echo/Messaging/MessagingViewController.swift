@@ -83,6 +83,7 @@ final class MessagingViewController: UIViewController {
         guard let text = textField.text, !text.isEmpty else { return }
         
         viewModel.appendMessage(with: text)
+        textField.text = nil
     }
 }
 
